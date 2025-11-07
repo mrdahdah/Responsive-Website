@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GlobeTrek | Travel Agency</title>
+  <meta name="description" content="GlobeTrek Travel Agency — curated destinations, flexible tours, and seamless booking." />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    :root { --primary:#0d6efd; --dark:#0b132b; }
+    body { scroll-behavior: smooth; }
+    .navbar { background:#0b132b; }
+    .navbar-brand { font-weight:700; letter-spacing:.4px; }
+    .nav-link { color:rgba(255,255,255,.9)!important; }
+    .nav-link:hover { color:#9bc1ff!important; }
+
+    .hero {
+      min-height: 85vh; color:#fff; text-align:center;
+      display:flex; align-items:center; justify-content:center;
+      background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+                  url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=2070&auto=format&fit=crop');
+      background-size:cover; background-position:center;
+    }
+    .hero .btn { padding:.8rem 1.4rem; }
+
+    .card img { height: 200px; object-fit: cover; }
+    footer { background:#0b132b; color:#fff; }
+    footer a { color:#d0deff; }
+    footer a:hover { color:#fff; }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home">GlobeTrek</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navlinks" aria-controls="navlinks" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navlinks">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#destinations">Destinations</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tours">Tours</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero" id="home">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Discover Your Next Adventure</h1>
+      <p class="lead mb-4">Handpicked destinations, flexible tours, unforgettable memories.</p>
+      <a href="#destinations" class="btn btn-primary btn-lg">Explore Destinations</a>
+    </div>
+  </header>
+
+  <!-- Destinations -->
+  <section class="py-5" id="destinations">
+    <div class="container">
+      <h2 class="text-center mb-4">Top Destinations</h2>
+      <p class="text-center text-muted mb-5">A glimpse of our favorite places around the world</p>
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=2070&auto=format&fit=crop" class="card-img-top" alt="Santorini cliffs and blue domes">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Santorini, Greece</h5>
+              <p class="card-text text-muted">Sunsets, whitewashed villages, and crystal-clear waters.</p>
+              <div class="mt-auto">
+                <a href="#tours" class="btn btn-outline-primary btn-sm">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=2070&auto=format&fit=crop" class="card-img-top" alt="Kyoto red gates torii">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Kyoto, Japan</h5>
+              <p class="card-text text-muted">Ancient temples, serene gardens, and cultural heritage.</p>
+              <div class="mt-auto">
+                <a href="#tours" class="btn btn-outline-primary btn-sm">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?q=80&w=2070&auto=format&fit=crop" class="card-img-top" alt="Machu Picchu in the Andes">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Machu Picchu, Peru</h5>
+              <p class="card-text text-muted">Mystical Incan ruins nestled in the Andes.</p>
+              <div class="mt-auto">
+                <a href="#tours" class="btn btn-outline-primary btn-sm">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tours (Accordion) -->
+  <section class="py-5 bg-light" id="tours">
+    <div class="container">
+      <h2 class="text-center mb-4">Featured Tours</h2>
+      <div class="accordion" id="toursAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="tourOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#tourOneContent" aria-expanded="true" aria-controls="tourOneContent">
+              Aegean Escape (7 Days)
+            </button>
+          </h2>
+          <div id="tourOneContent" class="accordion-collapse collapse show" aria-labelledby="tourOne" data-bs-parent="#toursAccordion">
+            <div class="accordion-body">
+              Island hopping across the Cyclades with boutique stays, guided walks, and sunset cruises.
+              <a href="#contact" class="ms-2">View Details</a>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="tourTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tourTwoContent" aria-expanded="false" aria-controls="tourTwoContent">
+              Zen & Culture (10 Days)
+            </button>
+          </h2>
+        <div id="tourTwoContent" class="accordion-collapse collapse" aria-labelledby="tourTwo" data-bs-parent="#toursAccordion">
+            <div class="accordion-body">
+              A curated journey through Kyoto and Nara featuring tea ceremonies and temple tours.
+              <a href="#contact" class="ms-2">View Details</a>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="tourThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tourThreeContent" aria-expanded="false" aria-controls="tourThreeContent">
+              Andes Explorer (8 Days)
+            </button>
+          </h2>
+          <div id="tourThreeContent" class="accordion-collapse collapse" aria-labelledby="tourThree" data-bs-parent="#toursAccordion">
+            <div class="accordion-body">
+              Trek the Sacred Valley, ride the panoramic train, and tour Machu Picchu at sunrise.
+              <a href="#contact" class="ms-2">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="py-5" id="contact">
+    <div class="container">
+      <h2 class="text-center mb-4">Get in Touch</h2>
+      <p class="text-center text-muted mb-5">Tell us where you want to go and we’ll handle the rest.</p>
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+          <form class="needs-validation" novalidate>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input id="name" type="text" class="form-control" placeholder="John Smith" required />
+              <div class="invalid-feedback">Please enter your name.</div>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input id="email" type="email" class="form-control" placeholder="john@example.com" required />
+              <div class="invalid-feedback">Please provide a valid email.</div>
+            </div>
+            <div class="mb-3">
+              <label for="destination" class="form-label">Destination of Interest</label>
+              <select id="destination" class="form-select" required>
+                <option value="" selected disabled>Choose a destination</option>
+                <option>Santorini, Greece</option>
+                <option>Kyoto, Japan</option>
+                <option>Machu Picchu, Peru</option>
+              </select>
+              <div class="invalid-feedback">Please choose a destination.</div>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea id="message" class="form-control" rows="4" placeholder="Trip dates, preferences, group size..." required></textarea>
+              <div class="invalid-feedback">Please enter a message.</div>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Inquiry</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-4">
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
+      <p class="mb-3 mb-md-0 small">&copy; <span id="year"></span> GlobeTrek Travel. All rights reserved.</p>
+      <div>
+        <a href="#" class="me-3" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="me-3" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // client-side validation visuals
+    (()=>{
+      const forms = document.querySelectorAll('.needs-validation');
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', e => {
+          if (!form.checkValidity()) { e.preventDefault(); e.stopPropagation(); }
+          form.classList.add('was-validated');
+        });
+      });
+    })();
+    // dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
