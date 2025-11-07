@@ -1,0 +1,17 @@
+.chat-toggle{
+  position: fixed; right: 1rem; bottom: 1rem; z-index: 1055;
+  border-radius: 999px; padding-inline: 1rem; padding-block: .65rem;
+}
+
+.chat-messages{
+  height: 320px; overflow-y: auto;
+}
+
+.msg{ display: flex; margin-bottom: .5rem; }
+.msg-user{ justify-content: flex-end; }
+.msg-bubble{
+  max-width: 80%; padding: .5rem .75rem; border-radius: .75rem;
+}
+.msg-user .msg-bubble{ background: var(--bs-primary-bg-subtle,#e7f1ff); color: var(--bs-body-color); }
+.msg-assistant .msg-bubble{ background: var(--bs-secondary-bg,#f8f9fa); }
+
